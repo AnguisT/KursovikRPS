@@ -29,6 +29,21 @@ public class PeopleDAO {
         this.con = con;
     }
     
+    public People getPeople(Long numberpassport) throws SQLException {
+        People people = new People();
+        String query = "select * from People where NumberPassport = ?";
+        pstmt = con.prepareStatement(query);
+        pstmt.setLong(1, numberpassport);        
+        rs = pstmt.executeQuery();
+        while (rs.next()) {
+            people.setNumberPassport(rs.getLong(1));
+            people.setDateOfBirthday(rs.getString(2));
+            people.setSecondName(rs.getString(4));
+            people.setMiddleName(rs.getString(5));
+        }
+        return people;
+    }
+    
 //    public List<Resume> getAllResume() throws SQLException, IOException {
 //        resume = new ArrayList<>();
 //        String query = "select * from resume";

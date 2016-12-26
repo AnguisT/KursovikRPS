@@ -7,23 +7,16 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <head>
         <title>Список кандидатов на выборы</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <ui:include src="contextMenu.xhtml" />
     </head>
     <body>
         <h:form>
-            <c:forEach items="#{candidateMB.candidate}" var="cand" varStatus="status">
-                <div>
-                    <h:inputText value="#{cand.people.firstName}"/><br/>
-                    <h:inputText value="#{cand.people.secondName}"/><br/>
-                    <h:inputText value="#{cand.people.middleName}"/><br/>
-                    <h:inputText value="#{cand.informationcandidate.numberVoter}"/><br/>
-                    <h:inputText value="#{cand.informationcandidate.placeInList}"/><br/>
-                    <h:inputText value="#{cand.informationcandidate.description}"/><br/>
-                </div>                
-            </c:forEach>
+            Hello!
         </h:form>
     </body>
 </html>
