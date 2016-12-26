@@ -4,6 +4,14 @@
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
     </context-param>
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>Filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -30,7 +38,7 @@
         <web-resource-collection>
             <web-resource-name>Allxhtml</web-resource-name>
             <description/>
-            <url-pattern>*.xhtml</url-pattern>
+            <url-pattern>/index.xhtml</url-pattern>
             <http-method>GET</http-method>
             <http-method>HEAD</http-method>
             <http-method>POST</http-method>
@@ -40,6 +48,33 @@
             <role-name>Admin</role-name>
             <role-name>National</role-name>
             <role-name>Candidate</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>Home</display-name>
+        <web-resource-collection>
+            <web-resource-name>FromHome</web-resource-name>
+            <description/>
+            <url-pattern>/Home.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>Admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-constraint>
+        <display-name>ListCndidate</display-name>
+        <web-resource-collection>
+            <web-resource-name>FromCandidate</web-resource-name>
+            <description/>
+            <url-pattern>/listCandidate.xhtml</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>HEAD</http-method>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>National</role-name>
         </auth-constraint>
     </security-constraint>
     <login-config>
