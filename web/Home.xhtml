@@ -10,7 +10,6 @@
         <!--<ui:include src="index.xhtml"/>-->
         <ui:include src="contextMenu.xhtml" />
         <h:form>
-            Hello Vlad
             <h:commandLink action="index.xhtml" rendered="#{request.isUserInRole('Admin')}">Вернуться</h:commandLink>
         </h:form>
     </h:body>
