@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import DAOImpl.PeopleDAO;
 import Models.People;
+import javax.servlet.http.HttpServletResponse;
 
 public class AuthFilter implements Filter {
     
@@ -41,7 +42,9 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
-
+        
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
         if (((HttpServletRequest) request).getSession().getAttribute("people_passport") == null) {
             String numberpassport = ((HttpServletRequest) request).getRemoteUser();
             if (numberpassport != null) {        
@@ -51,6 +54,8 @@ public class AuthFilter implements Filter {
                     people = peopledao.getPeople(passport);
                     ((HttpServletRequest) request).getSession()
                         .setAttribute("people_passport", people);
+                    String url = req.getContextPath() + "/Main/Home.xhtml";
+                    res.sendRedirect(url);
                 } catch (SQLException ex) {
                     Logger.getLogger(AuthFilter.class.getName()).log(Level.SEVERE, null, ex);
                 }                

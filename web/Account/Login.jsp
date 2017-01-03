@@ -3,18 +3,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Авторизация</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <div style="text-align: center"><h1>Авторизация</h1></div>
-        <form method="POST" action="j_security_check">
+        <h1>Авторизация</h1>
+        <form action="j_security_check" method="POST">
             <fieldset>
-                <legend>Авторизация</legend>
-                Введите номер паспорта:<br>
-                <input type="text" name="j_username" /><br>
-                Введите дату своего рождения без точек:<br>
-                <input type="password" name="j_password"><br>
-                <input type="submit" value="Вход" />
+                <legend>Форма авторизации</legend>
+                Введите номер паспорта:<br/>
+                <input type="text" name="j_username"><br/>
+                Введите дату своего рождения без точек (ддММгггг):<br/>
+                <input type="password" name="j_password"><br/>
+                <br/>
+                <input type="submit" value="Login" >
             </fieldset>
         </form>
     </body>

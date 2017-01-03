@@ -4,12 +4,13 @@
     <Scope Scope="Project">
         <Node id="listCandidate.xhtml" x="401" y="123" zoom="true"/>
         <Node id="Error/errorLogin.jsp" x="829" y="195" zoom="true"/>
+        <Node id="index.xhtml" x="650" y="150" zoom="true"/>
         <Node id="Shared/contextMenu.xhtml" x="150" y="450" zoom="true"/>
-        <Node id="Main/Home.xhtml" x="417" y="248" zoom="true"/>
-        <Node id="contextMenu.xhtml" x="690" y="91" zoom="true"/>
+        <Node id="Main/Home.xhtml" x="120" y="300" zoom="true"/>
         <Node id="Main/index.xhtml" x="456" y="41" zoom="true"/>
-        <Node id="Account/Login.jsp" x="150" y="300" zoom="true"/>
-        <Node id="Account/Login.xhtml" x="151" y="250" zoom="true"/>
+        <Node id="contextMenu.xhtml" x="690" y="91" zoom="true"/>
+        <Node id="Account/Login.jsp" x="338" y="303" zoom="true"/>
+        <Node id="Account/Login.xhtml" x="160" y="127" zoom="true"/>
         <Node id="Shared/loginPartial.xhtml" x="146" y="52" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
