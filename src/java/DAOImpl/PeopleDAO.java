@@ -10,14 +10,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import Models.People;
-import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-/**
- *
- * @author Владислав
- */
 public class PeopleDAO {
     
     ArrayList<People> resume;
@@ -44,20 +41,22 @@ public class PeopleDAO {
         return people;
     }
     
-//    public List<Resume> getAllResume() throws SQLException, IOException {
-//        resume = new ArrayList<>();
-//        String query = "select * from resume";
-//        pstmt = con.prepareStatement(query);
-//        rs = pstmt.executeQuery();
-//        while (rs.next()) {
-//            People p = new People();
-//            p.setNumberPassport(rs.getInt(1));
-//            p.setDateOfBirthday(rs.getString(2));
-//            p.set(rs.getInt(3));
-//            p.setDateCreate(rs.getDate(4));
-//            resume.add(r);
-//        }
-//        rs.close();
-//        return resume;
-//    }
+    public People getCheckPeople(Long Login, Date Password) throws SQLException {
+        DateFormat df = new SimpleDateFormat("ddMMyyyy");
+        String dateofbirthday = df.format(Password);
+        People people = new People();
+        String query = "select * from People where NumberPassport = ? and DateOfBirthday = ?";
+        pstmt = con.prepareStatement(query);
+        pstmt.setLong(1, Login);
+        pstmt.setString(2, dateofbirthday);
+        rs = pstmt.executeQuery();
+        while (rs.next()) {
+            people.setNumberPassport(rs.getLong(1));
+            people.setDateOfBirthday(rs.getString(2));
+            people.setFirstName(rs.getString(3));
+            people.setSecondName(rs.getString(4));
+            people.setMiddleName(rs.getString(5));
+        }
+        return people;
+    }
 }

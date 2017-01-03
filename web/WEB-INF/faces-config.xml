@@ -10,4 +10,11 @@
             <to-view-id>/listCandidate.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Main/Home.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Login</from-outcome>
+            <to-view-id>/Account/Login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>

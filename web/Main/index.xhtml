@@ -9,9 +9,8 @@
     </h:head>
     <h:body>
         <h:form>
-            <div style="text-align: end">Hello <h:outputText value="#{people.people.secondName}"/><br/>
-                <h:commandLink action="#{request.logout()}">Выйти</h:commandLink></div>
-            <ui:include src="contextMenu.xhtml" />
+            <ui:include src="Shared/loginPartial.xhtml" />
+            <ui:include src="Shared/contextMenu.xhtml" />
             <h:commandButton value="Delete" rendered="#{request.isUserInRole('Admin')}" />
             <br/>
             <h:commandLink action="Home.xhtml">Перейти</h:commandLink>
