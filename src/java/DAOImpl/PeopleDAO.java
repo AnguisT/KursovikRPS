@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DAOImpl;
 
 import java.sql.Connection;
@@ -22,8 +17,8 @@ public class PeopleDAO {
     private static PreparedStatement pstmt;
     private static ResultSet rs;
     
-    public PeopleDAO(Connection con) {
-        this.con = con;
+    public PeopleDAO(Connection conn) {
+        this.con = conn;
     }
     
     public People getPeople(Long numberpassport) throws SQLException {

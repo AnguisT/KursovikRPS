@@ -18,8 +18,8 @@ public class CandidateDAO {
     private static PreparedStatement pstmt;
     private static ResultSet rs;
     
-    public CandidateDAO(Connection con) {
-        this.con = con;
+    public CandidateDAO(Connection conn) {
+        this.con = conn;
     }
     
     public List<Candidate> getAllCandidate() throws SQLException, IOException {
@@ -31,14 +31,19 @@ public class CandidateDAO {
             Candidate c = new Candidate();
             People p = new People();
             InformationCandidate ic = new InformationCandidate();
-            p.setFirstName(rs.getString(11));
-            p.setSecondName(rs.getString(12));
-            p.setMiddleName(rs.getString(13));
+            c.setNumberPassportC(rs.getLong(1));
+            c.setIdInformationVoter(rs.getInt(2));
+            ic.setIdInformationCandidate(rs.getInt(3));
             ic.setNumberVoter(rs.getInt(4));
             ic.setPlaceInList(rs.getInt(5));
             ic.setDescription(rs.getString(6));
             ic.setNameImage(rs.getString(7));
             ic.setNameVideo(rs.getString(8));
+            p.setNumberPassport(rs.getLong(9));
+            p.setDateOfBirthday(rs.getString(10));
+            p.setFirstName(rs.getString(11));
+            p.setSecondName(rs.getString(12));
+            p.setMiddleName(rs.getString(13));
             c.setPeople(p);
             c.setInformationcandidate(ic);
             candidates.add(c);

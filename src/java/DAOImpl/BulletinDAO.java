@@ -10,10 +10,9 @@ public class BulletinDAO {
     
     private static Connection con;
     private static PreparedStatement pstmt;
-    private static ResultSet rs;
     
-    public BulletinDAO(Connection con) {
-        this.con = con;
+    public BulletinDAO(Connection conn) {
+        this.con = conn;
     }
     
     public void Vote(Long numberpassport, Candidate candidate) throws SQLException {

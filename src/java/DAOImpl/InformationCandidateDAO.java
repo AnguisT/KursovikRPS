@@ -1,17 +1,14 @@
 package DAOImpl;
 
 import Models.Candidate;
-import Models.InformationCandidate;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class InformationCandidateDAO {
     
     private static Connection con;
     private static PreparedStatement pstmt;
-    private static ResultSet rs;
     
     public InformationCandidateDAO(Connection conn) {
         this.con = conn;

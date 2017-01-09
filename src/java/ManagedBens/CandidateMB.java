@@ -5,7 +5,6 @@ import Models.Candidate;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -21,8 +20,6 @@ public class CandidateMB {
     private List<Candidate> candidates;
     private Candidate candidate;
     private CandidateDAO cand;
-    private List<Candidate> list = new ArrayList();
-    private String radio;
 
     public CandidateMB() {
     }

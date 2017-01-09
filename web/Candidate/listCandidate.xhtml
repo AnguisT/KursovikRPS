@@ -21,9 +21,10 @@
                     <th>Отчество</th>
                     <th>Место в избирательном листе</th>
                     <th>Число проголосовавших</th>
+                    <th></th>
                 </tr>
                 <c:forEach var="candidate" items="#{candidateMB.candidates}">
-                    <tr style="text-align: center">
+                    <tr>
                         <td><h:outputText value="${candidate.people.firstName}"/></td>
                         <td><h:outputText value="${candidate.people.secondName}"/></td>
                         <td><h:outputText value="${candidate.people.middleName}"/></td>

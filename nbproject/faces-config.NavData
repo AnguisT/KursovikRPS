@@ -2,16 +2,18 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="Candidate/listCandidate.xhtml" x="648" y="218" zoom="true"/>
-        <Node id="Home.xhtml" x="350" y="228" zoom="true"/>
+        <Node id="Candidate/listCandidate.xhtml" x="706" y="224" zoom="true"/>
+        <Node id="Home.xhtml" x="328" y="284" zoom="true"/>
         <Node id="Candidate/InformCandidate.xhtml" x="520" y="92" zoom="true"/>
-        <Node id="Error/errorLogin.jsp" x="680" y="339" zoom="true"/>
-        <Node id="index.xhtml" x="97" y="75" zoom="true"/>
-        <Node id="Error/errorVoter.xhtml" x="677" y="388" zoom="true"/>
-        <Node id="Shared/contextMenu.xhtml" x="664" y="40" zoom="true"/>
-        <Node id="Account/Login.jsp" x="47" y="384" zoom="true"/>
+        <Node id="index.xhtml" x="166" y="46" zoom="true"/>
+        <Node id="Account/Login.jsp" x="592" y="483" zoom="true"/>
         <Node id="Shared/loginPartial.xhtml" x="405" y="40" zoom="true"/>
         <Node id="National/Voter.xhtml" x="375" y="396" zoom="true"/>
+        <Node id="Error/errorLogin.jsp" x="680" y="339" zoom="true"/>
+        <Node id="Error/errorVoter.xhtml" x="677" y="388" zoom="true"/>
+        <Node id="Shared/contextMenu.xhtml" x="664" y="40" zoom="true"/>
+        <Node id="Admin/AddCandidate.xhtml" x="61" y="432" zoom="true"/>
+        <Node id="Admin/DeleteCandidate.xhtml" x="24" y="283" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

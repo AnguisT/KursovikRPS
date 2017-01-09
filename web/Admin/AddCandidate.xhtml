@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>Добавить нового кандидата</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <ui:include src="/Shared/loginPartial.xhtml" />
+        <ui:include src="/Shared/contextMenu.xhtml" />
+        <h:form>
+            <h2 class="zagalovok">Добавление нового кандидата</h2>
+            <table class="table">
+                <c:forEach var="nat" items="#{nationalMB.nationals}" varStatus="status">
+                    <tr>
+                        <td><h:outputText value="#{nat.people.firstName}"/></td>
+                        <td><h:outputText value="#{nat.people.secondName}"/></td>
+                        <td><h:outputText value="#{nat.people.middleName}"/></td>
+                        <td><h:inputText value="#{adminMB.placeInList}" /></td>
+                        <td><h:commandLink value="Добавить нового кандидата" action="#{adminMB.addCandidate(nat)}"/></td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </h:form>
+    </body>
+</html>

@@ -3,21 +3,6 @@
               xmlns="http://xmlns.jcp.org/xml/ns/javaee"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-    <managed-bean>
-        <managed-bean-name>BulletinMB</managed-bean-name>
-        <managed-bean-class>ManagedBens.BulletinMB</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
-    <managed-bean>
-        <managed-bean-name>CandidateMB</managed-bean-name>
-        <managed-bean-class>ManagedBens.CandidateMB</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
-    <managed-bean>
-        <managed-bean-name>PeopleMB</managed-bean-name>
-        <managed-bean-class>ManagedBens.PeopleMB</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
     <navigation-rule>
         <from-view-id>/Candidate/listCandidate.xhtml</from-view-id>
         <navigation-case>
@@ -44,23 +29,20 @@
             <to-view-id>/Candidate/listCandidate.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>Login</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
             <from-outcome>Home</from-outcome>
             <to-view-id>/Home.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>DeleteCandidate</from-outcome>
+            <to-view-id>/Admin/DeleteCandidate.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>AddCandidate</from-outcome>
+            <to-view-id>/Admin/AddCandidate.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/National/Voter.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>Home</from-outcome>
-            <to-view-id>/Home.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>Home</from-outcome>
             <to-view-id>/Home.xhtml</to-view-id>
@@ -75,6 +57,28 @@
         <navigation-case>
             <from-outcome>List</from-outcome>
             <to-view-id>/Candidate/listCandidate.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Admin/DeleteCandidate.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>DeleteCandidate</from-outcome>
+            <to-view-id>/Admin/DeleteCandidate.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Home</from-outcome>
+            <to-view-id>/Home.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Admin/AddCandidate.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>AddCandidate</from-outcome>
+            <to-view-id>/Admin/AddCandidate.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Home</from-outcome>
+            <to-view-id>/Home.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>
