@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:form>
-        <div style="text-align: end">
+    <h:form class="top-login">
+        <div>
             <h:outputText value="Здравствуйте #{people.people.secondName}" rendered="#{people.authenticate}"/>
             <h:outputText value="Здравствуйте гость" rendered="#{!people.authenticate}"/><br/>
             <h:commandLink action="#{account.logout()}" rendered="#{people.authenticate}">Выйти</h:commandLink>
-            <h:commandLink action="Login" rendered="#{!people.authenticate}">Войти</h:commandLink>
+            <c:if test="#{!people.authenticate}">
+                <a href="Login">Войти</a>
+            </c:if>
         </div>
     </h:form>
 </html>

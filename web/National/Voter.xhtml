@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Голосование</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <ui:include src="/Shared/loginPartial.xhtml" />
+        <ui:include src="/Shared/contextMenu.xhtml" />
+        <h:form>
+            <h2 class="zagalovok">Голосование</h2>
+            <table style="margin: auto"  >
+                <c:catch var="SQLException">
+                    <c:forEach var="cand" items="#{candidateMB.sortCandidates}" varStatus="status">
+                        <tr>
+                            <td><h:outputText value="#{cand.informationcandidate.placeInList}"/></td>
+                            <td><h:outputText value="#{cand.people.firstName}"/></td>
+                            <td><h:outputText value="#{cand.people.secondName}"/></td>
+                            <td><h:outputText value="#{cand.people.middleName}"/></td>
+                            <td><h:commandButton value="Голосовать" action="#{bulletin.Voter(cand)}"/></td>
+                        </tr>
+                    </c:forEach>
+                </c:catch>
+            </table>
+            <c:if test="${SQLException != null}">
+                <p>The exception : ${SQLException}<br/>
+                   There is an exception: ${SQLException.message}</p>
+            </c:if>
+        </h:form>
+    </body>
+</html>

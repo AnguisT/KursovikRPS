@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>Список кандидатов на выборы</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <ui:include src="/Shared/loginPartial.xhtml" />
+        <ui:include src="/Shared/contextMenu.xhtml" />
+        <h:form>
+            <h2 class="zagalovok">Список кандидатов</h2>
+            <table class="table">
+                <tr>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+                    <th>Отчество</th>
+                    <th>Место в избирательном листе</th>
+                    <th>Число проголосовавших</th>
+                </tr>
+                <c:forEach var="candidate" items="#{candidateMB.candidates}">
+                    <tr style="text-align: center">
+                        <td><h:outputText value="${candidate.people.firstName}"/></td>
+                        <td><h:outputText value="${candidate.people.secondName}"/></td>
+                        <td><h:outputText value="${candidate.people.middleName}"/></td>
+                        <td><h:outputText value="${candidate.informationcandidate.placeInList}"/></td>
+                        <td><h:outputText value="${candidate.informationcandidate.numberVoter}"/></td>
+                        <td><h:commandLink action="Inform" actionListener="#{candidateMB.setCandidate(candidate)}">Полная информация</h:commandLink></td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </h:form>
+    </body>
+</html>

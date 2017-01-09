@@ -3,10 +3,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Авторизация</title>
     </head>
     <body>
-        <h1>Авторизация</h1>
+        <h1 style="text-align: center">Авторизация</h1>
         <form action="j_security_check" method="POST">
             <fieldset>
                 <legend>Форма авторизации</legend>

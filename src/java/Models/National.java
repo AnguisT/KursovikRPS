@@ -3,7 +3,7 @@ package Models;
 public class National {
     
     private Long NumberPassportN;
-    private Long NumberAttempts;
+    private int NumberAttempts;
     
     private People people;
 
@@ -24,14 +24,14 @@ public class National {
     /**
      * @return the NumberAttempts
      */
-    public Long getNumberAttempts() {
+    public int getNumberAttempts() {
         return NumberAttempts;
     }
 
     /**
      * @param NumberAttempts the NumberAttempts to set
      */
-    public void setNumberAttempts(Long NumberAttempts) {
+    public void setNumberAttempts(int NumberAttempts) {
         this.NumberAttempts = NumberAttempts;
     }
 

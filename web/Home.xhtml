@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Главная страница</title>
+        <link href="Styles/style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <body>
+        <ui:include src="/Shared/loginPartial.xhtml" />
+        <ui:include src="/Shared/contextMenu.xhtml" />
+        <h:form>
+                <h2 class="zagalovok">Выборы</h2>
+            <div>
+                Здравствуйте дорогие гости. Вас приветсвует сайт на котором вы можете проголосовать не выходя из дома и не идя на участок.
+                Вы наверно думаете что все не так просто, но на сам деле все просто. Пройдя эти этапы вы можете проголосвать: 
+                <ol>
+                    <li>Вам не надо регистрироваться, а только авторизоваться.</li>
+                    <li>Введите серию и номер своего пасспорта, а так же дату своего рождения.</li>
+                    <li>Нажать Голосовать.</li>
+                    <li>Выбрать кандидата и нажать голосовать.</li>
+                </ol>
+                Вот и все что вам понадобится сделать.<br/>
+                Спасибо за то, что решили воспользоваться нашим сайтом.
+            </div>
+        </h:form>
+    </body>
+</html>

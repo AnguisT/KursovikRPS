@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:form>
-        <h:commandLink action="/Main/Home.xhtml">Главная страница</h:commandLink> | 
-        <h:commandLink action="/listCandidate.xhtml">Список кандидатов</h:commandLink>
+    <h:form class="top-links">
+        <h:panelGrid columns="10" cellpadding="5" >
+            <h:commandLink action="Home">Главная страница</h:commandLink> 
+            <h:commandLink action="List">Список кандидатов</h:commandLink> 
+            <h:commandLink action="Voter" rendered="#{request.isUserInRole('National')}">Голосовать</h:commandLink> 
+        </h:panelGrid>  
     </h:form>
 </html>

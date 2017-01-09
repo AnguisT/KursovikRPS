@@ -1,0 +1,67 @@
+html {
+    background: rgb(228, 233, 228);
+}
+
+.table {
+    margin-left: 10px;
+    margin: auto;
+}
+
+body {
+    margin: 0 auto;
+    width: 1200px;
+    background: #fff;
+    height: 662px;
+    box-shadow: inset 0 0 8px 0px rgba(0,0,0,0.5);
+}
+
+div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top-login {
+    background-color: #0366ad;
+    color: #fff;
+    height: 35px;
+    box-shadow: 0 -5px 5px 0px rgba(0,0,0,0.5);
+}
+
+.top-login div {
+    display: inline-block;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+}
+
+.top-login a {
+    display: inline-block;
+    color: #fff;
+}
+
+.top-links {
+    background-color: #0366ad;
+    color: #fff;
+    height: 35px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.5);
+}
+
+.top-links a {
+    display: inline-block;
+    color: #fff;
+}
+
+img {
+    margin-left: 100px; 
+    margin-left: 100px; 
+    margin-top: 50px;
+}
+
+video {
+    float: right; 
+    margin-right: 100px;
+}
+
+.zagalovok {
+    text-align: center;
+}

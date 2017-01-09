@@ -54,7 +54,7 @@ public class AuthFilter implements Filter {
                     people = peopledao.getPeople(passport);
                     ((HttpServletRequest) request).getSession()
                         .setAttribute("people_passport", people);
-                    String url = req.getContextPath() + "/Main/Home.xhtml";
+                    String url = req.getContextPath() + "Home";
                     res.sendRedirect(url);
                 } catch (SQLException ex) {
                     Logger.getLogger(AuthFilter.class.getName()).log(Level.SEVERE, null, ex);
