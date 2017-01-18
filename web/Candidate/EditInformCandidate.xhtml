@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Изменение данных кандидата</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="../Styles/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <ui:include src="/Shared/loginPartial.xhtml" />
+        <ui:include src="/Shared/contextMenu.xhtml" />
+        <h:form enctype="multipart/form-data">
+        <h2 class="zagalovok">Изменение данных</h2>
+            <div>
+                <p>Выберите свою фотографию</p>
+                <h:inputFile value="#{fileMB.fileImg}">
+                    <f:validator validatorId="fileImgValidator"/>
+                </h:inputFile>
+                <h:commandButton value="Загрузить" action="#{fileMB.uploadFile()}"/>
+            </div>
+            <br/>
+            <div>
+                <p>Выберите свое видео</p>
+                <h:inputFile value="#{fileMB.fileVideo}">
+                    <f:validator validatorId="fileVideoValidator"/>
+                </h:inputFile>
+                <h:commandButton value="Загрузить" action="#{fileMB.uploadFile()}"/>
+            </div>
+            <p><h:messages id="messages"/></p>
+            <br/>
+            <h:inputTextarea class="text" value="#{candidateMB.description}"/>
+            <br/>
+            <h:commandButton class="inputsave" value="Сохранить" action="#{candidateMB.updateDesInform()}"/>
+        </h:form>
+    </body>
+</html>

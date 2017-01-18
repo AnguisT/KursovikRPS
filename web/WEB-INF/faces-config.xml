@@ -17,6 +17,10 @@
             <from-outcome>List</from-outcome>
             <to-view-id>/Candidate/listCandidate.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>EditInform</from-outcome>
+            <to-view-id>/Candidate/EditInformCandidate.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/Home.xhtml</from-view-id>
@@ -40,12 +44,20 @@
             <from-outcome>AddCandidate</from-outcome>
             <to-view-id>/Admin/AddCandidate.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>EditInform</from-outcome>
+            <to-view-id>/Candidate/EditInformCandidate.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/National/Voter.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>Home</from-outcome>
             <to-view-id>/Home.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Voter</from-outcome>
+            <to-view-id>/National/Voter.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -58,6 +70,10 @@
             <from-outcome>List</from-outcome>
             <to-view-id>/Candidate/listCandidate.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>EditInform</from-outcome>
+            <to-view-id>/Candidate/EditInformCandidate.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/Admin/DeleteCandidate.xhtml</from-view-id>
@@ -69,6 +85,10 @@
             <from-outcome>Home</from-outcome>
             <to-view-id>/Home.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>AddCandidate</from-outcome>
+            <to-view-id>/Admin/AddCandidate.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/Admin/AddCandidate.xhtml</from-view-id>
@@ -79,6 +99,21 @@
         <navigation-case>
             <from-outcome>Home</from-outcome>
             <to-view-id>/Home.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>DeleteCandidate</from-outcome>
+            <to-view-id>/Admin/DeleteCandidate.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Candidate/EditInformCandidate.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Home</from-outcome>
+            <to-view-id>/Home.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>EditInform</from-outcome>
+            <to-view-id>/Candidate/EditInformCandidate.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>

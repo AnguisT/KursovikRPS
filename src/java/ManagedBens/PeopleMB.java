@@ -10,6 +10,8 @@ import javax.servlet.http.HttpSession;
 @SessionScoped
 public class PeopleMB {
 
+    private People people;
+    
     public PeopleMB() {
     
     }
@@ -17,7 +19,7 @@ public class PeopleMB {
     public People getPeople(){
         FacesContext facesContext = FacesContext.getCurrentInstance();
         HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-        People people = (People)session.getAttribute("people_passport");
+        people = (People)session.getAttribute("people_passport");
         return people;
     }
     
@@ -27,5 +29,15 @@ public class PeopleMB {
             result = true;
         }
         return result;
+    }
+    
+    public void logOff() {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+        session.removeAttribute("people_passport");
+    }
+
+    public void setPeople(People people) {
+        this.people = people;
     }
 }

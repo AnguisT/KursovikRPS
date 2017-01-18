@@ -51,6 +51,5 @@ public class AdminDAO {
         pstmt = con.prepareStatement("delete from National where NumberPassportN = ?");
         pstmt.setLong(1, national.getNumberPassportN());
         pstmt.executeUpdate();
-        
     }
 }

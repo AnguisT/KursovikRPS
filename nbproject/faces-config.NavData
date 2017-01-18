@@ -2,18 +2,19 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="Candidate/listCandidate.xhtml" x="706" y="224" zoom="true"/>
         <Node id="Home.xhtml" x="328" y="284" zoom="true"/>
-        <Node id="Candidate/InformCandidate.xhtml" x="520" y="92" zoom="true"/>
+        <Node id="Candidate/listCandidate.xhtml" x="706" y="224" zoom="true"/>
+        <Node id="Candidate/InformCandidate.xhtml" x="521" y="105" zoom="true"/>
         <Node id="index.xhtml" x="166" y="46" zoom="true"/>
         <Node id="Account/Login.jsp" x="592" y="483" zoom="true"/>
+        <Node id="Candidate/EditInformCandidate.xhtml" x="101" y="139" zoom="true"/>
         <Node id="Shared/loginPartial.xhtml" x="405" y="40" zoom="true"/>
-        <Node id="National/Voter.xhtml" x="375" y="396" zoom="true"/>
+        <Node id="National/Voter.xhtml" x="400" y="432" zoom="true"/>
         <Node id="Error/errorLogin.jsp" x="680" y="339" zoom="true"/>
         <Node id="Error/errorVoter.xhtml" x="677" y="388" zoom="true"/>
         <Node id="Shared/contextMenu.xhtml" x="664" y="40" zoom="true"/>
         <Node id="Admin/AddCandidate.xhtml" x="61" y="432" zoom="true"/>
-        <Node id="Admin/DeleteCandidate.xhtml" x="24" y="283" zoom="true"/>
+        <Node id="Admin/DeleteCandidate.xhtml" x="28" y="282" zoom="true"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
 </Scene>

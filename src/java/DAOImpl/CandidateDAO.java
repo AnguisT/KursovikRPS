@@ -79,4 +79,16 @@ public class CandidateDAO {
         rs.close();
         return candidates;
     }
+    
+    public Candidate getCandidate(People people) throws SQLException{
+        pstmt = con.prepareStatement("select * from Candidate where NumberPassportC = ?");
+        pstmt.setLong(1, people.getNumberPassport());
+        rs = pstmt.executeQuery();
+        Candidate candidate = new Candidate();
+        while (rs.next()) {
+            candidate.setNumberPassportC(rs.getLong(1));
+            candidate.setIdInformationVoter(rs.getInt(2));
+        }
+        return candidate;
+    }
 }

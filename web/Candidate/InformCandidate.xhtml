@@ -14,11 +14,11 @@
         <ui:include src="/Shared/contextMenu.xhtml" />
         <h:form>
             <h2 class="zagalovok">Кандидат #{candidateMB.candidate.people.firstName} #{candidateMB.candidate.people.secondName} #{candidateMB.candidate.people.middleName}</h2>
-            <img width="180" height="200" src='#{request.contextPath}/Images/#{candidateMB.candidate.informationcandidate.nameImage}'/>
+            <img width="200" height="200" src="#{request.contextPath}/Images/#{candidateMB.candidate.informationcandidate.nameImage}"/>
             <video id="myVideo" width="560" height="315" controls="controls" >
                 <source src="#{request.contextPath}/Videos/#{candidateMB.candidate.informationcandidate.nameVideo}" type="video/mp4" />
             </video>
-            <br/><br/><br/>
+            <br/><br/><br/><br/><br/>
             <div><h:outputText value="#{candidateMB.candidate.informationcandidate.description}"/></div>
         </h:form>
     </body>

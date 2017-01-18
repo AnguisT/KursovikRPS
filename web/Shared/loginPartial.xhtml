@@ -7,7 +7,7 @@
         <div>
             <h:outputText value="Здравствуйте #{people.people.secondName}" rendered="#{people.authenticate}"/>
             <h:outputText value="Здравствуйте гость" rendered="#{!people.authenticate}"/><br/>
-            <h:commandLink action="#{account.logout()}" rendered="#{people.authenticate}">Выйти</h:commandLink>
+            <h:commandLink action="#{request.logout()}" actionListener="#{people.logOff()}" rendered="#{people.authenticate}">Выйти</h:commandLink>
             <c:if test="#{!people.authenticate}">
                 <a href="index.xhtml">Войти</a>
             </c:if>

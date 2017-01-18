@@ -27,6 +27,16 @@ video {
     margin-right: 100px;
 }
 
+.text {
+    width: 470px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.inputsave {
+    margin-left: 10px;
+}
+
 .top-login {
     background-color: #0366ad;
     color: #fff;

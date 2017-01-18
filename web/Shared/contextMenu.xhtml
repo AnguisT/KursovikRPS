@@ -9,6 +9,7 @@
             <h:commandLink action="Voter" rendered="#{request.isUserInRole('National')}">Голосовать</h:commandLink> 
             <h:commandLink action="AddCandidate" rendered="#{request.isUserInRole('Admin')}">Добавить нового кандидата</h:commandLink> 
             <h:commandLink action="DeleteCandidate" rendered="#{request.isUserInRole('Admin')}">Удалить кандидата из списка</h:commandLink> 
+            <h:commandLink action="EditInform" rendered="#{request.isUserInRole('Candidate')}">Изменить свои данные</h:commandLink>
         </h:panelGrid>  
     </h:form>
 </html>
